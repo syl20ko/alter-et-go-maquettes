@@ -9,6 +9,7 @@
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
   document.querySelectorAll('[data-open-popup]').forEach(function (el) { el.addEventListener('click', function (e) { e.preventDefault(); open(); }); });
   if (!params.has('nopop')) { setTimeout(open, 900); }
+  if (params.has('nobar')) { document.body.classList.add('barre-cachee'); }
   /* reveal au scroll */
   if ('IntersectionObserver' in window && !params.has('static') && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     var io = new IntersectionObserver(function (entries) { entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }); }, { threshold: 0.12 });

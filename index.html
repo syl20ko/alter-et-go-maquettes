@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ALTER ET GO ! Trois pistes pour la nouvelle page d'accueil</title>
+<title>ALTER ET GO ! Trois visuels pour la refonte du site</title>
 <meta name="robots" content="noindex, nofollow">
 <meta name="author" content="Sylvain Caron">
 <meta name="copyright" content="Maquettes (c) Sylvain Caron 2026. Proposition non contractuelle. Reproduction et réutilisation interdites sans accord écrit.">
@@ -64,8 +64,8 @@ h1,h2,h3{font-family:var(--display);line-height:1.1;letter-spacing:-.015em;font-
 .panneau{display:grid;grid-template-columns:1.25fr .75fr;gap:3rem;align-items:center;background:#fff;border-radius:var(--r);padding:2.2rem;margin-bottom:2rem;box-shadow:0 20px 50px -30px rgba(20,32,42,.35);position:relative;overflow:hidden}
 .panneau:nth-child(even){grid-template-columns:.75fr 1.25fr}
 .panneau:nth-child(even) .txt{order:-1}
-.panneau .num{position:absolute;top:1.2rem;left:1.6rem;font-family:var(--display);font-weight:800;font-size:5rem;line-height:1;color:var(--turquoise-l);user-select:none;z-index:0}
-.panneau:nth-child(even) .num{left:auto;right:1.6rem;color:var(--corail-l)}
+.txt .num{display:block;font-family:var(--display);font-weight:800;font-size:4.2rem;line-height:1;color:transparent;-webkit-text-stroke:2px var(--turquoise);margin-bottom:.6rem;letter-spacing:-.04em}
+.panneau:nth-child(even) .txt .num{-webkit-text-stroke-color:var(--corail)}
 .ecrans{position:relative;z-index:1;padding:0 0 2.4rem}
 .ecrans .desk{border-radius:12px;overflow:hidden;box-shadow:0 24px 50px -24px rgba(20,32,42,.55);border:1px solid #e3e9ec;background:#fff}
 .ecrans .desk .chrome{height:28px;background:#e9eef0;display:flex;align-items:center;gap:6px;padding:0 10px}
@@ -115,7 +115,7 @@ footer .wrap{border-top:1px solid #dfe7ea;padding-top:1.4rem;display:flex;justif
   .top .qui{text-align:left}
   .eventail{height:240px}
   .panneau{padding:1.4rem}
-  .panneau .num{font-size:3.5rem}
+  .txt .num{font-size:3rem}
   .txt h3{font-size:1.6rem}
   .commun .boite{padding:1.6rem}
   .commun .tuiles{grid-template-columns:1fr}
@@ -133,9 +133,9 @@ footer .wrap{border-top:1px solid #dfe7ea;padding-top:1.4rem;display:flex;justif
     </div>
     <div class="hero">
       <div>
-        <span class="kicker"><i></i>Page d'accueil</span>
-        <h1>Trois pistes pour la <em>nouvelle</em> page d'accueil</h1>
-        <p class="lead">Même logo, mêmes couleurs turquoise et corail, mêmes photos et mêmes textes que le site actuel. Seules la mise en page et l'ambiance changent. À regarder sur ordinateur et sur téléphone.</p>
+        <span class="kicker"><i></i>Refonte du site</span>
+        <h1>Trois visuels pour la <em>refonte</em> du site</h1>
+        <p class="lead">Même logo, mêmes couleurs turquoise et corail, mêmes photos et mêmes textes que le site actuel. Seules la mise en page et l'ambiance changent. La page d'accueil sert de démonstration, le reste du site suivra le visuel retenu. À regarder sur ordinateur et sur téléphone.</p>
         <div class="sommaire">
           <a href="#m1"><b>1</b>Horizon</a>
           <a href="#m2"><b>2</b>Cerf-volant</a>
@@ -153,23 +153,23 @@ footer .wrap{border-top:1px solid #dfe7ea;padding-top:1.4rem;display:flex;justif
 
 <main class="choix">
   <div class="wrap">
-    <h2>Choisir une piste</h2>
-    <p class="intro">Chaque maquette est une vraie page qui s'ouvre dans le navigateur, avec le menu, les animations et la fenêtre d'actualité. Une barre en haut de chaque maquette permet de revenir ici ou de passer à la suivante.</p>
+    <h2>Choisir un visuel</h2>
+    <p class="intro">Chaque maquette est une vraie page qui s'ouvre dans le navigateur, avec le menu, les animations et la fenêtre d'actualité. La barre jaune en haut de chaque maquette permet de passer de l'une à l'autre ou de revenir ici.</p>
 
     <article class="panneau" id="m1">
-      <span class="num">01</span>
       <div class="ecrans">
         <a class="desk" href="maquette-1-horizon.html"><div class="chrome"><i></i><i></i><i></i></div><img src="apercus/m1.png" alt="Aperçu de la maquette Horizon sur ordinateur"></a>
         <a class="mob" href="maquette-1-horizon.html"><img src="apercus/m1-mobile.png" alt="Aperçu de la maquette Horizon sur téléphone"></a>
       </div>
       <div class="txt">
+        <span class="num">01</span>
         <span class="tag">Maquette 1</span>
         <h3>Horizon</h3>
         <p>La plus proche du site actuel, en version nette et actuelle. Une grande photo d'accueil, la carte « À la une » posée dessus, puis des sections classiques que tout le monde comprend.</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Repères conservés : photo en bandeau, trois activités, formulaire en bas</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Chiffres clés et calendrier des saisons ajoutés</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>La piste la plus rassurante pour l'équipe et les familles</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Le visuel le plus rassurant pour l'équipe et les familles</li>
         </ul>
         <div class="actions"><a class="btn btn-corail" href="maquette-1-horizon.html">Ouvrir la maquette <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
         <div class="ambiance">Ambiance <i style="background:#1cbbb4"></i><i style="background:#fd6a54"></i><i style="background:#1b2a33"></i><i style="background:#fff"></i> fonds blancs, vagues douces</div>
@@ -177,19 +177,19 @@ footer .wrap{border-top:1px solid #dfe7ea;padding-top:1.4rem;display:flex;justif
     </article>
 
     <article class="panneau" id="m2">
-      <span class="num">02</span>
       <div class="ecrans">
         <a class="desk" href="maquette-2-cerf-volant.html"><div class="chrome"><i></i><i></i><i></i></div><img src="apercus/m2.png" alt="Aperçu de la maquette Cerf-volant sur ordinateur"></a>
         <a class="mob" href="maquette-2-cerf-volant.html"><img src="apercus/m2-mobile.png" alt="Aperçu de la maquette Cerf-volant sur téléphone"></a>
       </div>
       <div class="txt">
+        <span class="num">02</span>
         <span class="tag">Maquette 2</span>
         <h3>Cerf-volant</h3>
         <p>La plus chaleureuse. Un collage de photos qui flotte, des formes arrondies, le fil du cerf-volant du logo qui traverse le haut de page, et un bandeau d'actualité sombre impossible à rater.</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Grosse accroche « Partir en vacances, tout simplement »</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Photos rondes, blocs colorés, logos partenaires qui défilent</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>La piste la plus vivante, proche de l'esprit vacances</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Le visuel le plus vivant, proche de l'esprit vacances</li>
         </ul>
         <div class="actions"><a class="btn btn-corail" href="maquette-2-cerf-volant.html">Ouvrir la maquette <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
         <div class="ambiance">Ambiance <i style="background:#1cbbb4"></i><i style="background:#fd6a54"></i><i style="background:#22303a"></i><i style="background:#fbf8f2"></i> fond crème, grands arrondis</div>
@@ -197,19 +197,19 @@ footer .wrap{border-top:1px solid #dfe7ea;padding-top:1.4rem;display:flex;justif
     </article>
 
     <article class="panneau" id="m3">
-      <span class="num">03</span>
       <div class="ecrans">
         <a class="desk" href="maquette-3-carnet.html"><div class="chrome"><i></i><i></i><i></i></div><img src="apercus/m3.png" alt="Aperçu de la maquette Carnet sur ordinateur"></a>
         <a class="mob" href="maquette-3-carnet.html"><img src="apercus/m3-mobile.png" alt="Aperçu de la maquette Carnet sur téléphone"></a>
       </div>
       <div class="txt">
+        <span class="num">03</span>
         <span class="tag">Maquette 3</span>
         <h3>Carnet</h3>
         <p>La plus lisible. Une « une » de journal pour l'actualité, des rubriques numérotées, un tableau des saisons, des traits francs et un fort contraste. Des boutons A+ et Contraste en haut, en cohérence avec la mission.</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Police Atkinson Hyperlegible, conçue pour la lisibilité</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Actualité et « En bref » comme une première page de journal</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>La piste la plus accessible, sérieuse sans être froide</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Le visuel le plus accessible, sérieux sans être froid</li>
         </ul>
         <div class="actions"><a class="btn btn-corail" href="maquette-3-carnet.html">Ouvrir la maquette <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
         <div class="ambiance">Ambiance <i style="background:#1cbbb4"></i><i style="background:#fd6a54"></i><i style="background:#14202a"></i><i style="background:#fffdf9"></i> traits noirs, ombres franches</div>
@@ -222,7 +222,7 @@ footer .wrap{border-top:1px solid #dfe7ea;padding-top:1.4rem;display:flex;justif
   <div class="wrap">
     <div class="boite">
       <div>
-        <h2>Ce que les trois pistes ont en commun</h2>
+        <h2>Ce que les trois visuels ont en commun</h2>
         <p>Le contenu mis en avant est le même partout. C'est la mise en page qui change, pas le message.</p>
         <p class="astuce">Astuce : ajouter <code>?nopop=1</code> à l'adresse d'une maquette l'ouvre sans la fenêtre d'actualité.</p>
       </div>
