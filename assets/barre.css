@@ -1,0 +1,10 @@
+/* Barre de navigation entre maquettes. (c) Sylvain Caron 2026. Ne modifie pas les maquettes. */
+.barre-maq{font-family:'Nunito',system-ui,sans-serif;background:#0f1a21;color:#cfe7ea;font-size:13px;line-height:1;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 16px;height:40px;position:relative;z-index:50}
+.barre-maq a{color:#fff;text-decoration:none;font-weight:700;display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border-radius:6px;transition:background .15s}
+.barre-maq a:hover{background:rgba(255,255,255,.12)}
+.barre-maq a:focus-visible{outline:2px solid #1cbbb4;outline-offset:2px}
+.barre-maq .centre{display:flex;align-items:center;gap:8px;font-weight:700;color:#fff}
+.barre-maq .centre i{width:8px;height:8px;border-radius:50%;background:#1cbbb4;display:inline-block}
+.barre-maq .centre span{color:#8fa6ae;font-weight:400}
+.barre-maq .nav-maq{display:flex;gap:4px}
+@media(max-width:640px){.barre-maq .centre span{display:none}.barre-maq .mot{display:none}}

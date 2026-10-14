@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr-fr" lang="fr-fr">
+    <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127746146-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-127746146-1');
+</script>
+                <base href="https://www.alteretgo.org/index.php" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="BALIZTIC" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>Association ALTER ET GO ! Loisirs pour personnes en situation de handicap mental - Association ALTER ET GO ! Loisirs pour personnes en situation de handicap mental</title>
+	<link href="/templates/theme3353/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="/plugins/system/jce/css/content.css?aa754b1f19c7df490be4b958cf085e7c" rel="stylesheet" type="text/css" />
+	<link href="/media/jui/css/chosen.css?ad9e73e940cb4f9953ed37eda0e53fea" rel="stylesheet" type="text/css" />
+	<link href="/templates/theme3353/css/template.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/theme3353/css/font-awesome.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/theme3353/html/mod_icemegamenu/css/navbar.css" rel="stylesheet" type="text/css" />
+	<script src="/media/jui/js/jquery.min.js?ad9e73e940cb4f9953ed37eda0e53fea" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?ad9e73e940cb4f9953ed37eda0e53fea" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?ad9e73e940cb4f9953ed37eda0e53fea" type="text/javascript"></script>
+	<script src="/media/jui/js/bootstrap.min.js?ad9e73e940cb4f9953ed37eda0e53fea" type="text/javascript"></script>
+	<script src="/media/jui/js/chosen.jquery.min.js?ad9e73e940cb4f9953ed37eda0e53fea" type="text/javascript"></script>
+	<script src="/templates/theme3353/js/jquery.BlackAndWhite.min.js" type="text/javascript"></script>
+	<script src="/templates/theme3353/js/scripts.js" type="text/javascript"></script>
+	<script src="/templates/theme3353/html/mod_icemegamenu/js/menu.js" type="text/javascript" defer="defer"></script>
+	<script src="/templates/theme3353/html/mod_icemegamenu/js/jquery.rd-navbar.js" type="text/javascript" defer="defer"></script>
+	<script type="text/javascript">
+jQuery(function($){ initTooltips(); $("body").on("subform-row-add", initTooltips); function initTooltips (event, container) { container = container || document;$(container).find(".hasTooltip").tooltip({"html": true,"container": "body"});} });
+	jQuery(function ($) {
+		initChosen();
+		$("body").on("subform-row-add", initChosen);
+
+		function initChosen(event, container)
+		{
+			container = container || document;
+			$(container).find("select").chosen({"disable_search_threshold":10,"search_contains":true,"allow_single_deselect":true,"placeholder_text_multiple":"Saisir ou choisir des options","placeholder_text_single":"S\u00e9lectionnez une option","no_results_text":"Aucun r\u00e9sultat correspondant"});
+		}
+	});
+	(function($,b){$.fn.BlackAndWhite_init=function(){var a=$(this);a.find("img").not(".slide-img").parent().BlackAndWhite({invertHoverEffect:1,intensity:1,responsive:true,speed:{fadeIn:500,fadeOut:500}})}})(jQuery);jQuery(window).load(function($){jQuery(".item_img a").find("img").not(".lazy").parent().BlackAndWhite_init()});var path = "templates/theme3353/js/";jQuery(function($){var e=$(window).width();$("#icemegamenu").find(".icesubMenu").each(function(a){var b=$(this).offset();var c=b.left+$(this).width();if(c>=e){$(this).addClass("ice_righttoleft")}});$(window).resize(function(){var d=$(window).width();$("#icemegamenu").find(".icesubMenu").removeClass("ice_righttoleft").each(function(a){var b=$(this).offset();var c=b.left+$(this).width();if(c>=d){$(this).addClass("ice_righttoleft")}})})});
+	</script>
+
+        <link href="//fonts.googleapis.com/css?family=Raleway:100,300i,400,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+
+
+    </head>
+    <body class="body__ option-com_content view-article task- itemid-">
+                <!-- Body -->
+        <div id="wrapper">
+            <div class="wrapper-inner">
+                <a id="fake" href='#'></a>
+
+
+                <!-- top -->
+    <div id="top"><div class="container">
+        <div class="row"><div class="moduletable top_articles  col-sm-12"><div class="module_container"><div class="mod-newsflash-adv mod-newsflash-adv__top_articles cols-2" id="module_105">
+    <div class="row">
+    <article class="col-sm-6 item item_num0 item__module  " id="item_104">
+    
+<div class="item_content">
+	<!-- Item title -->
+		<!-- Introtext -->
+	<div class="item_introtext">
+		<p><i class="fl fl-justicons-maps7"> <b>Naturopole Bât. A - 3, bd de Clairfont - 66350 Toulouges</b></i></p>	</div>
+	
+	
+	<!-- Read More link -->
+	</div>
+<div class="clearfix"></div>  </article>
+    <article class="col-sm-6 item item_num1 item__module  lastItem" id="item_105">
+    
+<div class="item_content">
+	<!-- Item title -->
+		<!-- Introtext -->
+	<div class="item_introtext">
+		<p><a class="fa fa-facebook hasTooltip" title="" href="https://www.facebook.com/Asso-Alteretgo-1406263443031102/" target="_blank" rel="noopener" data-original-title="Facebook">Facebook</a></p>
+<p><i class="fl fl-justicons-telephone95"> <b>04 68 87 89 01</b></i></p>	</div>
+	
+	
+	<!-- Read More link -->
+	</div>
+<div class="clearfix"></div>  </article>
+    </div> 
+  <div class="clearfix"></div>
+
+  </div></div></div></div>
+        </div></div>
+               
+                                <!-- navigation -->
+                <!-- navigation -->
+    <div id="navigation"><div class="container">
+        <div class="row"><!-- Logo -->
+                            <div id="logo" class="col-sm-2">
+                                <a href="https://www.alteretgo.org/">
+                                    <img src="/images/alteretgo-logo-final.png" alt="Association ALTER ET GO ! Loisirs pour personnes en situation de handicap mental">
+                                    <h1><span class="item_title_char0 item_title_char_odd item_title_char_first_half item_title_char_first">A</span><span class="item_title_char1 item_title_char_even item_title_char_first_half">s</span><span class="item_title_char2 item_title_char_odd item_title_char_first_half">s</span><span class="item_title_char3 item_title_char_even item_title_char_first_half">o</span><span class="item_title_char4 item_title_char_odd item_title_char_first_half">c</span><span class="item_title_char5 item_title_char_even item_title_char_first_half">i</span><span class="item_title_char6 item_title_char_odd item_title_char_first_half">a</span><span class="item_title_char7 item_title_char_even item_title_char_first_half">t</span><span class="item_title_char8 item_title_char_odd item_title_char_first_half">i</span><span class="item_title_char9 item_title_char_even item_title_char_first_half">o</span><span class="item_title_char10 item_title_char_odd item_title_char_first_half">n</span><span class="item_title_char11 item_title_char_even item_title_char_first_half"> </span><span class="item_title_char12 item_title_char_odd item_title_char_first_half">A</span><span class="item_title_char13 item_title_char_even item_title_char_first_half">L</span><span class="item_title_char14 item_title_char_odd item_title_char_first_half">T</span><span class="item_title_char15 item_title_char_even item_title_char_first_half">E</span><span class="item_title_char16 item_title_char_odd item_title_char_first_half">R</span><span class="item_title_char17 item_title_char_even item_title_char_first_half"> </span><span class="item_title_char18 item_title_char_odd item_title_char_first_half">E</span><span class="item_title_char19 item_title_char_even item_title_char_first_half">T</span><span class="item_title_char20 item_title_char_odd item_title_char_first_half"> </span><span class="item_title_char21 item_title_char_even item_title_char_first_half">G</span><span class="item_title_char22 item_title_char_odd item_title_char_first_half">O</span><span class="item_title_char23 item_title_char_even item_title_char_first_half"> </span><span class="item_title_char24 item_title_char_odd item_title_char_first_half">!</span><span class="item_title_char25 item_title_char_even item_title_char_first_half"> </span><span class="item_title_char26 item_title_char_odd item_title_char_first_half">L</span><span class="item_title_char27 item_title_char_even item_title_char_first_half">o</span><span class="item_title_char28 item_title_char_odd item_title_char_first_half">i</span><span class="item_title_char29 item_title_char_even item_title_char_first_half">s</span><span class="item_title_char30 item_title_char_odd item_title_char_first_half">i</span><span class="item_title_char31 item_title_char_even item_title_char_first_half">r</span><span class="item_title_char32 item_title_char_odd item_title_char_first_half">s</span><span class="item_title_char33 item_title_char_even item_title_char_first_half"> </span><span class="item_title_char34 item_title_char_odd item_title_char_first_half">p</span><span class="item_title_char35 item_title_char_even item_title_char_first_half">o</span><span class="item_title_char36 item_title_char_odd item_title_char_first_half">u</span><span class="item_title_char37 item_title_char_even item_title_char_first_half">r</span><span class="item_title_char38 item_title_char_odd item_title_char_first_half"> </span><span class="item_title_char39 item_title_char_even item_title_char_first_half">p</span><span class="item_title_char40 item_title_char_odd item_title_char_second_half">e</span><span class="item_title_char41 item_title_char_even item_title_char_second_half">r</span><span class="item_title_char42 item_title_char_odd item_title_char_second_half">s</span><span class="item_title_char43 item_title_char_even item_title_char_second_half">o</span><span class="item_title_char44 item_title_char_odd item_title_char_second_half">n</span><span class="item_title_char45 item_title_char_even item_title_char_second_half">n</span><span class="item_title_char46 item_title_char_odd item_title_char_second_half">e</span><span class="item_title_char47 item_title_char_even item_title_char_second_half">s</span><span class="item_title_char48 item_title_char_odd item_title_char_second_half"> </span><span class="item_title_char49 item_title_char_even item_title_char_second_half">e</span><span class="item_title_char50 item_title_char_odd item_title_char_second_half">n</span><span class="item_title_char51 item_title_char_even item_title_char_second_half"> </span><span class="item_title_char52 item_title_char_odd item_title_char_second_half">s</span><span class="item_title_char53 item_title_char_even item_title_char_second_half">i</span><span class="item_title_char54 item_title_char_odd item_title_char_second_half">t</span><span class="item_title_char55 item_title_char_even item_title_char_second_half">u</span><span class="item_title_char56 item_title_char_odd item_title_char_second_half">a</span><span class="item_title_char57 item_title_char_even item_title_char_second_half">t</span><span class="item_title_char58 item_title_char_odd item_title_char_second_half">i</span><span class="item_title_char59 item_title_char_even item_title_char_second_half">o</span><span class="item_title_char60 item_title_char_odd item_title_char_second_half">n</span><span class="item_title_char61 item_title_char_even item_title_char_second_half"> </span><span class="item_title_char62 item_title_char_odd item_title_char_second_half">d</span><span class="item_title_char63 item_title_char_even item_title_char_second_half">e</span><span class="item_title_char64 item_title_char_odd item_title_char_second_half"> </span><span class="item_title_char65 item_title_char_even item_title_char_second_half">h</span><span class="item_title_char66 item_title_char_odd item_title_char_second_half">a</span><span class="item_title_char67 item_title_char_even item_title_char_second_half">n</span><span class="item_title_char68 item_title_char_odd item_title_char_second_half">d</span><span class="item_title_char69 item_title_char_even item_title_char_second_half">i</span><span class="item_title_char70 item_title_char_odd item_title_char_second_half">c</span><span class="item_title_char71 item_title_char_even item_title_char_second_half">a</span><span class="item_title_char72 item_title_char_odd item_title_char_second_half">p</span><span class="item_title_char73 item_title_char_even item_title_char_second_half"> </span><span class="item_title_char74 item_title_char_odd item_title_char_second_half">m</span><span class="item_title_char75 item_title_char_even item_title_char_second_half">e</span><span class="item_title_char76 item_title_char_odd item_title_char_second_half">n</span><span class="item_title_char77 item_title_char_even item_title_char_second_half">t</span><span class="item_title_char78 item_title_char_odd item_title_char_second_half">a</span><span class="item_title_char79 item_title_char_even item_title_char_second_half item_title_char_last">l</span></h1>
+                                </a>
+                                </div>
+                            <div class="moduletable home_menu  col-sm-10"><div class="module_container">
+<div class="icemegamenu">
+	<ul id="icemegamenu">
+		<li id="iceMenu_101" class="iceMenuLiLevel_1 ">
+			<a href="https://www.alteretgo.org/" class=" iceMenuTitle ">
+				<span class="icemega_title icemega_nosubtitle">Accueil</span>
+			</a>
+		</li>
+		<li id="iceMenu_168" class="iceMenuLiLevel_1 mzr-drop parent ">
+			<a href="/index.php/majeurs" class=" iceMenuTitle ">
+				<span class="icemega_title icemega_nosubtitle">SÉJOURS ADAPTÉS ADULTES</span>
+			</a>
+			<ul class="icesubMenu  sub_level_1" style="width:280px">
+				<li>
+					<div style="float:left;width:280px" class="iceCols">
+						<ul>
+							<li id="iceMenu_183" class="iceMenuLiLevel_2 ">
+								<a href="/index.php/majeurs/sejours-fevrier-a-mai" class=" iceMenuTitle ">
+									<span class="icemega_title icemega_nosubtitle">Séjours - Février à Mai</span>
+								</a>
+							</li>
+							<li id="iceMenu_184" class="iceMenuLiLevel_2 ">
+								<a href="/index.php/majeurs/sejours-ete" class=" iceMenuTitle ">
+									<span class="icemega_title icemega_nosubtitle">Séjours - ETE</span>
+								</a>
+							</li>
+							<li id="iceMenu_185" class="iceMenuLiLevel_2 ">
+								<a href="/index.php/majeurs/sejours-octobre-a-decembre" class=" iceMenuTitle ">
+									<span class="icemega_title icemega_nosubtitle">Séjours - Octobre à Décembre</span>
+								</a>
+							</li>
+							<li id="iceMenu_225" class="iceMenuLiLevel_2 ">
+								<a href="/index.php/majeurs/dossier-d-inscription-adulte" class=" iceMenuTitle ">
+									<span class="icemega_title icemega_nosubtitle">Dossier d'inscription</span>
+								</a>
+							</li>
+							<li id="iceMenu_187" class="iceMenuLiLevel_2 ">
+								<a href="/index.php/majeurs/ils-nous-font-confiance" class=" iceMenuTitle ">
+									<span class="icemega_title icemega_nosubtitle">Ils nous font confiance</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</li>
+		<li id="iceMenu_165" class="iceMenuLiLevel_1 mzr-drop parent ">
+			<a class=" iceMenuTitle ">
+				<span class="icemega_title icemega_nosubtitle">Animateurs</span>
+			</a>
+			<ul class="icesubMenu  sub_level_1" style="width:280px">
+				<li>
+					<div style="float:left;width:280px" class="iceCols">
+						<ul>
+							<li id="iceMenu_264" class="iceMenuLiLevel_2 ">
+								<a href="/index.php/devenir-animateur/je-postule" class=" iceMenuTitle ">
+									<span class="icemega_title icemega_nosubtitle">Je Postule !</span>
+								</a>
+							</li>
+							<li id="iceMenu_254" class="iceMenuLiLevel_2 ">
+								<a href="/index.php/devenir-animateur/ressources" class=" iceMenuTitle ">
+									<span class="icemega_title icemega_nosubtitle">Ressources</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</li>
+		<li id="iceMenu_169" class="iceMenuLiLevel_1 mzr-drop parent ">
+			<a class=" iceMenuTitle ">
+				<span class="icemega_title icemega_nosubtitle">NOS GÎTES DE GROUPE ADAPTÉS</span>
+			</a>
+			<ul class="icesubMenu  sub_level_1" style="width:280px">
+				<li>
+					<div style="float:left;width:280px" class="iceCols">
+						<ul>
+							<li id="iceMenu_357" class="iceMenuLiLevel_2 ">
+								<a href="https://www.gite-groupe-canigou.org" target="_blank" class=" iceMenuTitle ">
+									<span class="icemega_title icemega_nosubtitle">Le Village de Gîtes - Marquixanes</span>
+								</a>
+							</li>
+							<li id="iceMenu_358" class="iceMenuLiLevel_2 ">
+								<a href="/index.php/village-de-gites-pour-tous/la-villa-alter-et-go-rivesaltes" class=" iceMenuTitle ">
+									<span class="icemega_title icemega_nosubtitle">La Villa Alter et Go ! - Rivesaltes</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</li>
+		<li id="iceMenu_166" class="iceMenuLiLevel_1 ">
+			<a href="/index.php/contact" class=" iceMenuTitle ">
+				<span class="icemega_title icemega_nosubtitle">Contact</span>
+			</a>
+		</li>
+	</ul>
+</div></div></div></div>
+        </div></div>
+
+
+                                    
+                                <!-- Main Content row -->
+                <div id="content">
+                                        <div class="container">
+                        <div class="row">
+                                                <div class="content-inner">
+                                <!-- Left sidebar -->
+                                                                
+                                <div id="component" class="col-sm-12">
+                                    <main role="main">
+                                                                                <div id="system-message-container">
+	</div>
+
+                                        <article class="page-item page-item__">
+		<header class="item_header">
+		<h3 class="item_title">404 </h3>	</header>
+		<div class="item_fulltext"><p><i>Désolé, nous n'avons pas trouvé la page demandée...</i>&nbsp;</p> </div>
+		
+	
+	<!-- Social Sharing -->
+	 
+	<!-- Pagination -->
+	</article>
+                                                                            </main>
+                                </div>
+                                                            </div>
+                                                    </div>
+                    </div>
+                                            </div>
+                                <div id="push"></div>
+            </div>
+        </div>
+        <div id="footer-wrapper">
+            <div class="footer-wrapper-inner">
+                <!-- Copyright -->
+                <div id="copyright" role="contentinfo">
+                    <div class="container-fluid">                        <div class="row">
+
+                            <div class="copyright col-sm-12">
+                                                                <span class="siteName">Association ALTER ET GO ! Loisirs pour personnes en situation de handicap mental</span>
+                                                            </div>
+                            								<div style="padding-top:40px">
+                                <div class="moduletable   col-sm-4"><div class="module_container"><div class="mod-menu">
+	<ul class="menu social">
+	<li class="item-170">
+<a href="/index.php/mentions-legale" >Mentions légales</a>
+</li>
+	</ul>
+</div></div></div><div class="moduletable   col-sm-4"><div class="module_container"><div class="mod-article-single mod-article-single__" id="module_116">
+	<div class="item__module" id="item_116">
+				<!-- Intro Image -->
+		<figure class="item_img img-intro img-intro__">
+							<img src="/images/logo.jpeg" alt="">
+						</figure>
+		
+		<!-- Intro Text -->
+		<div class="item_introtext">
+					</div>	
+				</div>
+  </div></div></div><div class="moduletable   col-sm-4"><div class="module_container"><div class="mod-menu">
+	<ul class="menu social">
+	<li class="item-176">
+<span class="separator">Suivez-Nous !</span></li>
+<li class="item-175">
+<a class="fa fa-facebook hasTooltip" href="https://www.facebook.com/Asso-Alteretgo-1406263443031102/" target="_blank" title="Facebook" >Facebook</a>
+</li>
+	</ul>
+</div></div></div>
+								</div>
+                                
+                                 <div class="container">
+                                  <div class="row">
+                                  <div class="col-md-12" style="color : #fd6a54">
+                                                                                                <a   href='http://www.baliztic.com' target='_blank'>Migration Joomla</a>   <a   href='https://sylvain-caron.me' target='_blank'>Freelance Google ADS</a>
+                                  </div></div>
+                                  </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                
+    </body>
+</html>

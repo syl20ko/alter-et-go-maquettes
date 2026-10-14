@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maquette 3 Carnet : ALTER ET GO ! Vacances adaptées pour adultes</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="author" content="Sylvain Caron">
+<meta name="copyright" content="Maquette (c) Sylvain Caron 2026. Proposition non contractuelle. Reproduction et réutilisation interdites sans accord écrit.">
+<!-- Maquette page d'accueil, refonte Symfony du site alteretgo.org. (c) Sylvain Caron 2026. Proposition non contractuelle. -->
+<link rel="stylesheet" href="assets/barre.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --turquoise:#1cbbb4; --turquoise-d:#0f8a85; --turquoise-l:#e0f5f4;
+  --corail:#fd6a54; --corail-d:#c8422c; --corail-l:#ffeae5;
+  --encre:#14202a; --gris:#4d5d66; --ligne:#14202a; --papier:#fffdf9; --blanc:#fff;
+  --display:'Bricolage Grotesque',sans-serif; --body:'Atkinson Hyperlegible',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--encre);background:var(--papier);line-height:1.6;font-size:18px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.grand{font-size:21px}
+body.contraste{--turquoise:#0b6b67;--corail:#b83a25;--gris:#14202a;--turquoise-l:#fff;--corail-l:#fff;--papier:#fff}
+img{display:block;max-width:100%}
+a{color:var(--turquoise-d);text-decoration-thickness:2px;text-underline-offset:3px}
+h1,h2,h3{font-family:var(--display);line-height:1.05;letter-spacing:-.02em;font-weight:800}
+.wrap{width:min(1240px,100% - 40px);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:1rem 1.6rem;font-weight:700;text-decoration:none;cursor:pointer;border:3px solid var(--encre);background:#fff;color:var(--encre);font-family:var(--body);font-size:1rem;transition:transform .15s,box-shadow .15s,background .15s;box-shadow:4px 4px 0 var(--encre)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--encre)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--encre)}
+.btn:focus-visible{outline:4px solid var(--corail);outline-offset:3px}
+.btn-corail{background:var(--corail);color:var(--encre)}
+.btn-turq{background:var(--turquoise);color:#fff}
+.btn-encre{background:var(--encre);color:#fff}
+.kicker{display:inline-block;font-family:var(--display);font-weight:800;font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;color:var(--corail-d);margin-bottom:.6rem}
+.num{font-family:var(--display);font-weight:800;font-size:5rem;line-height:.8;color:var(--turquoise);letter-spacing:-.05em}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}*{animation:none!important;transition:none!important}}
+
+/* barre accessibilite */
+.a11y{background:var(--encre);color:#fff;font-size:.9rem}
+.a11y .wrap{display:flex;justify-content:space-between;align-items:center;min-height:44px;gap:1rem;flex-wrap:wrap}
+.a11y .outils{display:flex;gap:.4rem;align-items:center}
+.a11y button{font:inherit;font-weight:700;background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4);padding:.25rem .7rem;cursor:pointer;border-radius:4px}
+.a11y button:hover,.a11y button[aria-pressed=true]{background:#fff;color:var(--encre)}
+.a11y a{color:#fff;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:.4rem}
+.a11y svg{width:15px;height:15px;fill:var(--turquoise)}
+/* header */
+.header{position:sticky;top:0;z-index:40;background:var(--papier);border-bottom:3px solid var(--ligne)}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;min-height:96px;gap:1rem}
+.logo img{height:64px;width:auto}
+.nav ul{list-style:none;display:flex;gap:0;align-items:stretch}
+.nav li{position:relative}
+.nav a{display:flex;align-items:center;height:96px;padding:0 1.1rem;text-decoration:none;color:var(--encre);font-weight:700;font-size:1rem;border-bottom:4px solid transparent;margin-bottom:-3px;transition:border-color .15s,color .15s}
+.nav a:hover{border-bottom-color:var(--corail);color:var(--corail-d)}
+.nav .sub{position:absolute;top:100%;left:0;background:#fff;min-width:290px;border:3px solid var(--ligne);box-shadow:6px 6px 0 var(--encre);display:none;flex-direction:column}
+.nav li.has-sub:hover .sub,.nav li.has-sub:focus-within .sub{display:flex}
+.nav .sub a{height:auto;padding:.8rem 1.1rem;border-bottom:1px solid #e3e8ea;margin:0}
+.nav .sub a:last-child{border-bottom:0}
+.nav .cta a{background:var(--corail);color:var(--encre);height:auto;align-self:center;padding:.7rem 1.2rem;margin-left:.6rem;border:3px solid var(--encre);box-shadow:3px 3px 0 var(--encre)}
+.nav .cta a:hover{color:var(--encre);transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--encre)}
+.burger{display:none;background:#fff;border:3px solid var(--ligne);width:52px;height:52px;cursor:pointer;place-items:center;box-shadow:3px 3px 0 var(--encre)}
+.burger span{display:block;width:24px;height:3px;background:var(--encre);box-shadow:0 -8px 0 var(--encre),0 8px 0 var(--encre)}
+
+/* hero */
+.hero{background:var(--turquoise);color:var(--encre);border-bottom:3px solid var(--ligne)}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:3rem;align-items:center;padding:4rem 0}
+.hero .masthead{font-family:var(--display);font-weight:700;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1.6rem;opacity:.95}
+.hero .masthead span+span::before{content:"·";margin-right:1rem}
+.hero h1{font-size:clamp(2.6rem,5.6vw,4.8rem);max-width:13ch}
+.hero .lead{font-size:1.25rem;margin:1.4rem 0 2rem;max-width:46ch;font-weight:400}
+.hero .actions{display:flex;gap:1rem;flex-wrap:wrap}
+.hero .villes{margin-top:2rem;font-size:.95rem;border-top:2px solid rgba(20,32,42,.4);padding-top:1rem;max-width:60ch}
+.hero .villes b{display:block;font-family:var(--display);font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:.2rem}
+.hero figure{background:#fff;border:3px solid var(--ligne);padding:12px 12px 0;box-shadow:10px 10px 0 var(--encre);transform:rotate(1.5deg)}
+.hero figure img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.hero figcaption{color:var(--encre);font-size:.9rem;padding:.7rem .2rem;font-weight:700;font-family:var(--display)}
+
+/* A la une (une de journal) */
+.une{padding:3rem 0 4rem;border-bottom:3px solid var(--ligne)}
+.une .grille{display:grid;grid-template-columns:1.6fr 1fr;gap:3rem}
+.une .principal{border-right:2px solid var(--ligne);padding-right:3rem}
+.une .meta{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:.8rem}
+.une .meta .tag{background:var(--encre);color:#fff;font-family:var(--display);font-weight:800;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .7rem;display:inline-flex;align-items:center;gap:.5rem}
+.une .meta .tag i{width:9px;height:9px;border-radius:50%;background:var(--corail);animation:pulse 1.6s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.8)}70%{box-shadow:0 0 0 7px rgba(255,255,255,0)}}
+.une time{font-weight:700;color:var(--gris)}
+.une h2{font-size:clamp(2rem,3.8vw,3.2rem);max-width:20ch}
+.une .chapo{font-size:1.15rem;margin:1rem 0 1.6rem;color:var(--gris);max-width:60ch}
+.une .docs{display:grid;gap:.8rem;max-width:560px}
+.une .doc{display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:1rem;padding:.9rem 1rem;border:3px solid var(--ligne);background:#fff;text-decoration:none;color:var(--encre);transition:background .15s,transform .15s;box-shadow:4px 4px 0 var(--encre)}
+.une .doc:hover{background:var(--turquoise-l);transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--encre)}
+.une .doc .ico{width:48px;height:48px;background:var(--corail);display:grid;place-items:center;color:var(--encre)}
+.une .doc .ico svg{width:24px;height:24px}
+.une .doc b{display:block;font-family:var(--display);font-size:1.05rem}
+.une .doc small{color:var(--gris);font-size:.85rem}
+.une .doc .fleche{font-family:var(--display);font-weight:800;font-size:1.4rem}
+.une .bref h3{font-family:var(--display);font-size:1rem;letter-spacing:.08em;text-transform:uppercase;border-bottom:3px solid var(--ligne);padding-bottom:.5rem;margin-bottom:1rem}
+.une .bref article{padding:1rem 0;border-bottom:1px solid #cfd8dc}
+.une .bref time{display:block;font-size:.85rem;margin-bottom:.2rem}
+.une .bref b{font-family:var(--display);font-size:1.15rem;display:block;line-height:1.2}
+.une .bref p{color:var(--gris);font-size:.95rem;margin-top:.3rem}
+.une .bref .tous{margin-top:1.2rem;display:inline-block;font-weight:700}
+
+/* rubriques numerotees */
+.rubriques{padding:4rem 0 0}
+.rubrique{display:grid;grid-template-columns:120px 1fr 1fr;gap:2.5rem;align-items:center;padding:3.5rem 0;border-bottom:2px solid var(--ligne)}
+.rubrique:last-child{border-bottom:3px solid var(--ligne)}
+.rubrique:nth-child(even){grid-template-columns:120px 1fr 1fr}
+.rubrique:nth-child(even) .txt{order:3}
+.rubrique h3{font-size:clamp(1.8rem,3vw,2.6rem);margin-bottom:.8rem}
+.rubrique p{color:var(--gris);font-size:1.05rem;max-width:52ch}
+.rubrique .liens{margin-top:1.4rem;display:flex;gap:.8rem;flex-wrap:wrap}
+.rubrique figure{border:3px solid var(--ligne);background:#fff;padding:10px 10px 0;box-shadow:8px 8px 0 var(--turquoise)}
+.rubrique:nth-child(even) figure{box-shadow:8px 8px 0 var(--corail)}
+.rubrique figure img{aspect-ratio:3/2;object-fit:cover;width:100%}
+.rubrique figcaption{font-size:.85rem;font-weight:700;padding:.6rem .2rem;font-family:var(--display)}
+
+/* calendrier tableau */
+.calendrier{padding:4rem 0;border-bottom:3px solid var(--ligne)}
+.calendrier h2{font-size:clamp(2rem,3.4vw,2.8rem);margin-bottom:.5rem}
+.calendrier p.intro{color:var(--gris);max-width:60ch;margin-bottom:2rem}
+table{width:100%;border-collapse:collapse;background:#fff;border:3px solid var(--ligne)}
+th,td{text-align:left;padding:1rem 1.1rem;border-bottom:2px solid var(--ligne);vertical-align:top}
+th{font-family:var(--display);font-size:.9rem;letter-spacing:.08em;text-transform:uppercase;background:var(--encre);color:#fff}
+tr:last-child td{border-bottom:0}
+td .saison{font-family:var(--display);font-weight:800;font-size:1.25rem}
+td .etat{display:inline-block;font-weight:700;font-size:.8rem;padding:.25rem .6rem;border:2px solid var(--ligne);text-transform:uppercase;letter-spacing:.06em}
+td .etat.ouvert{background:var(--corail);color:var(--encre);border-color:var(--encre)}
+td ul{list-style:none;display:grid;gap:.4rem}
+td li a{font-weight:700;display:inline-flex;gap:.4rem;align-items:center}
+td li svg{width:16px;height:16px;color:var(--corail-d)}
+tr.ouvert td{background:var(--corail-l)}
+
+/* histoire citation */
+.histoire{padding:4.5rem 0;border-bottom:3px solid var(--ligne);background:#fff}
+.histoire .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:3rem;align-items:start}
+.histoire blockquote{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,2.6vw,2.2rem);line-height:1.2;border-left:8px solid var(--turquoise);padding-left:1.4rem}
+.histoire blockquote footer{font-family:var(--body);font-weight:400;font-size:1rem;color:var(--gris);margin-top:1rem}
+.histoire .texte p{color:var(--gris);margin-bottom:1rem}
+.histoire .faits{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin:1.4rem 0 1.6rem}
+.histoire .faits li{border:2px solid var(--ligne);padding:.7rem .9rem;font-weight:700;font-size:.95rem;display:flex;gap:.6rem;align-items:flex-start;background:var(--papier)}
+.histoire .faits svg{width:20px;height:20px;color:var(--turquoise-d);flex:none;margin-top:3px}
+
+/* gites */
+.gites{padding:4.5rem 0;border-bottom:3px solid var(--ligne)}
+.gites h2{font-size:clamp(2rem,3.4vw,2.8rem)}
+.gites p.intro{color:var(--gris);max-width:60ch;margin:.5rem 0 2.5rem}
+.gites .deux{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+.gite{background:#fff;border:3px solid var(--ligne);box-shadow:8px 8px 0 var(--encre)}
+.gite img{aspect-ratio:16/9;object-fit:cover;width:100%;border-bottom:3px solid var(--ligne)}
+.gite .in{padding:1.6rem}
+.gite .lieu{font-family:var(--display);font-weight:800;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--turquoise-d)}
+.gite .nouveau{background:var(--corail);color:var(--encre);padding:.2rem .5rem;margin-left:.5rem}
+.gite h3{font-size:1.8rem;margin:.3rem 0 .6rem}
+.gite p{color:var(--gris)}
+.gite dl{display:grid;grid-template-columns:auto 1fr;gap:.4rem 1rem;margin:1.2rem 0 1.6rem;font-size:.95rem}
+.gite dt{font-weight:700}
+.gite dd{color:var(--gris)}
+
+/* recrutement */
+.recrute{background:var(--corail);color:var(--encre);padding:4.5rem 0;border-bottom:3px solid var(--ligne)}
+.recrute .wrap{display:grid;grid-template-columns:1.3fr .7fr;gap:3rem;align-items:center}
+.recrute .kicker{color:#7a2a1a}
+.recrute h2{font-size:clamp(2rem,3.8vw,3.2rem);max-width:18ch}
+.recrute p{margin-top:1rem;max-width:56ch;font-size:1.1rem}
+.recrute ol{margin:1.4rem 0 1.8rem;padding-left:1.4rem;display:grid;gap:.5rem;font-weight:700}
+.recrute .boite{background:#fff;color:var(--encre);border:3px solid var(--ligne);box-shadow:8px 8px 0 var(--encre);padding:1.8rem}
+.recrute .boite .d{font-family:var(--display);font-weight:800;font-size:2rem;color:var(--corail-d);line-height:1}
+.recrute .boite p{color:var(--gris);font-size:1rem;margin:.6rem 0 1.4rem}
+
+/* confiance */
+.confiance{padding:4.5rem 0;border-bottom:3px solid var(--ligne)}
+.confiance h2{font-size:clamp(2rem,3.4vw,2.8rem)}
+.confiance p.intro{color:var(--gris);max-width:62ch;margin:.5rem 0 2rem}
+.confiance .logos{display:grid;grid-template-columns:repeat(5,1fr);border:3px solid var(--ligne);background:#fff}
+.confiance .logos div{display:grid;place-items:center;height:110px;padding:1rem;border-right:2px solid var(--ligne)}
+.confiance .logos div:last-child{border-right:0}
+.confiance .logos img{max-height:64px;object-fit:contain}
+.confiance .etabs{margin-top:1.6rem;columns:3;column-gap:2rem;list-style:none;font-size:.95rem}
+.confiance .etabs li{padding:.3rem 0;border-bottom:1px solid #cfd8dc;break-inside:avoid}
+
+/* contact */
+.contact{padding:4.5rem 0;background:#fff;border-bottom:3px solid var(--ligne)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.contact h2{font-size:clamp(2rem,3.4vw,2.8rem)}
+.contact .coord{display:grid;gap:1rem;margin-top:1.6rem}
+.contact .coord div{border-left:5px solid var(--turquoise);padding-left:1rem}
+.contact .coord b{display:block;font-family:var(--display);font-size:1.1rem}
+.contact .coord span{color:var(--gris)}
+.form{border:3px solid var(--ligne);padding:2rem;display:grid;gap:1.1rem;background:var(--papier);box-shadow:8px 8px 0 var(--encre)}
+.form label{font-weight:700;display:grid;gap:.4rem}
+.form input,.form textarea,.form select{font:inherit;padding:.9rem 1rem;border:3px solid var(--ligne);background:#fff;width:100%}
+.form input:focus,.form textarea:focus,.form select:focus{outline:4px solid var(--turquoise);outline-offset:2px}
+.form .deux{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.form small{color:var(--gris);font-size:.85rem}
+
+/* footer */
+.footer{background:var(--encre);color:#c9d6db;padding:3.5rem 0 1.5rem}
+.footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.15)}
+.footer .logo-f{background:#fff;padding:.7rem 1rem;display:inline-block;margin-bottom:1rem}
+.footer .logo-f img{height:52px}
+.footer h4{color:#fff;font-family:var(--display);margin-bottom:.8rem;font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase}
+.footer ul{list-style:none;display:grid;gap:.5rem}
+.footer a{color:#fff;text-decoration:none;font-weight:700}.footer a:hover{text-decoration:underline}
+.footer .agre{font-size:.9rem;line-height:1.5}
+.footer .bas{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;padding-top:1.4rem;font-size:.85rem}
+
+/* popup */
+.popup{position:fixed;inset:0;z-index:100;display:none;place-items:center;padding:1rem;background:rgba(20,32,42,.7)}
+.popup.is-open{display:grid}
+.popup .box{background:#fff;border:4px solid var(--ligne);max-width:680px;width:100%;box-shadow:14px 14px 0 var(--corail);animation:popin .35s ease-out;position:relative}
+@keyframes popin{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.popup .head{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 1.5rem;border-bottom:4px solid var(--ligne);background:var(--turquoise-l)}
+.popup .head .k{font-family:var(--display);font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:.95rem;display:inline-flex;gap:.6rem;align-items:center}
+.popup .head .k i{width:12px;height:12px;background:var(--corail);display:inline-block}
+.popup-close{font:inherit;font-weight:700;background:#fff;border:3px solid var(--ligne);padding:.45rem .9rem;cursor:pointer;box-shadow:3px 3px 0 var(--encre)}
+.popup-close:hover{background:var(--corail-l)}
+.popup-close:focus-visible{outline:4px solid var(--corail);outline-offset:2px}
+.popup .corps{padding:1.6rem 1.5rem}
+.popup h3{font-size:2rem;margin-bottom:.8rem}
+.popup p{color:var(--gris);margin-bottom:.9rem;font-size:1.05rem}
+.popup strong{color:var(--corail-d)}
+.popup .pied{display:flex;gap:1rem;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:0 1.5rem 1.5rem}
+.popup .pied label{display:flex;gap:.5rem;align-items:center;cursor:pointer;font-size:.95rem}
+.popup .pied input{width:20px;height:20px}
+body.popup-open{overflow:hidden}
+.maq{position:fixed;bottom:12px;left:12px;z-index:90;background:var(--encre);color:#fff;font-size:.72rem;padding:.4rem .7rem;letter-spacing:.03em;pointer-events:none;border:2px solid #fff}
+
+@media(max-width:1100px){
+  .rubrique,.rubrique:nth-child(even){grid-template-columns:90px 1fr}
+  .rubrique figure{grid-column:2}
+  .rubrique:nth-child(even) .txt{order:0}
+}
+@media(max-width:1024px){
+  .hero .wrap,.une .grille,.histoire .wrap,.gites .deux,.recrute .wrap,.contact .wrap{grid-template-columns:1fr}
+  .une .principal{border-right:0;padding-right:0;border-bottom:2px solid var(--ligne);padding-bottom:2rem}
+  .confiance .logos{grid-template-columns:repeat(3,1fr)}
+  .confiance .logos div{border-bottom:2px solid var(--ligne)}
+  .confiance .etabs{columns:2}
+  .footer .cols{grid-template-columns:1fr 1fr}
+}
+@media(max-width:900px){
+  .nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--papier);border-bottom:3px solid var(--ligne);padding:.5rem 20px 1rem}
+  .nav.open{display:block}
+  .nav ul{flex-direction:column;align-items:stretch}
+  .nav a{height:auto;padding:.9rem 0;border-bottom:1px solid #cfd8dc;margin:0}
+  .nav .sub{position:static;display:flex;box-shadow:none;border:0;padding-left:1rem}
+  .nav .cta a{margin:.8rem 0 0;justify-content:center;border-bottom:3px solid var(--ligne)}
+  .burger{display:grid}
+  .header .wrap{min-height:84px}
+  .logo img{height:54px}
+}
+@media(max-width:640px){
+  body{font-size:17px}
+  .a11y .adr,.a11y .outils>span{display:none}
+  .hero .wrap{padding:2.5rem 0}
+  .hero figure{box-shadow:6px 6px 0 var(--encre)}
+  .rubrique,.rubrique:nth-child(even){grid-template-columns:1fr;gap:1.2rem;padding:2.5rem 0}
+  .rubrique figure{grid-column:auto}
+  .num{font-size:3.5rem}
+  table,thead,tbody,tr,th,td{display:block}
+  thead{position:absolute;left:-9999px}
+  tr{border-bottom:3px solid var(--ligne)}
+  td{border-bottom:0;padding:.6rem 1rem}
+  td:first-child{padding-top:1rem}td:last-child{padding-bottom:1rem}
+  .histoire .faits{grid-template-columns:1fr}
+  .confiance .logos{grid-template-columns:1fr 1fr}
+  .confiance .etabs{columns:1}
+  .form .deux{grid-template-columns:1fr}
+  .footer .cols{grid-template-columns:1fr}
+  .une .doc{grid-template-columns:40px 1fr}
+  .une .doc .fleche{display:none}
+  .popup .box{box-shadow:8px 8px 0 var(--corail)}
+}
+</style>
+</head>
+<body>
+<div class="barre-maq"><a href="index.html">&#8592; <span class="mot">Voir les</span> 3 maquettes</a><div class="centre"><i></i>Maquette 3 / 3 <span>· Carnet</span></div><div class="nav-maq"><a href="maquette-2-cerf-volant.html" title="Maquette précédente">&#8249;</a><a href="maquette-1-horizon.html" title="Maquette suivante">&#8250;</a></div></div>
+
+<div class="a11y">
+  <div class="wrap">
+    <span class="adr">Naturopole Bât. A, 3 bd de Clairfont, 66350 Toulouges</span>
+    <div class="outils" aria-label="Outils d'accessibilité">
+      <span>Affichage :</span>
+      <button type="button" id="btn-grand" aria-pressed="false">A+</button>
+      <button type="button" id="btn-contraste" aria-pressed="false">Contraste</button>
+      <a href="tel:0468878901" style="margin-left:1rem"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg> 04 68 87 89 01</a>
+    </div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="wrap">
+    <a class="logo" href="#"><img src="assets/img/logo.png" alt="ALTER ET GO ! Loisirs pour personnes en situation de handicap mental"></a>
+    <button class="burger" aria-label="Menu" aria-expanded="false"><span></span></button>
+    <nav class="nav" aria-label="Navigation principale">
+      <ul>
+        <li class="has-sub"><a href="#sejours">Séjours adultes</a>
+          <div class="sub"><a href="#">Séjours Printemps</a><a href="#">Séjours Été</a><a href="#">Séjours Noël</a><a href="#">Dossier d'inscription</a><a href="#confiance">Ils nous font confiance</a></div></li>
+        <li class="has-sub"><a href="#recrute">Animateurs</a><div class="sub"><a href="#recrute">Je postule !</a><a href="#">Espace animateurs</a></div></li>
+        <li class="has-sub"><a href="#gites">Nos gîtes</a><div class="sub"><a href="#">Le Village de Gîtes, Marquixanes</a><a href="#">La Villa ALTER ET GO !, Rivesaltes</a></div></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="cta"><a href="#" data-open-popup>Actualités</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="masthead"><span>Toulouges, Pyrénées-Orientales</span><span>Depuis 2008</span><span>Agrément VAO</span></div>
+      <h1>Des vacances adaptées, pour de vrai.</h1>
+      <p class="lead">Séjours pour adultes en situation de handicap mental, toute l'année, en petits groupes homogènes, avec des équipes formées et une prise en charge près de chez vous.</p>
+      <div class="actions">
+        <a class="btn btn-encre" href="#une">Programme de Noël 2026</a>
+        <a class="btn" href="#gites">Nos gîtes de groupe</a>
+      </div>
+      <p class="villes"><b>Départs sans surcoût</b>Perpignan, Narbonne, Béziers, Montpellier, Nîmes, Arles, Avignon, Carcassonne, Castelnaudary, Toulouse.</p>
+    </div>
+    <figure><img src="assets/img/6.jpg" alt="Groupe de vacanciers et animateurs en montagne"><figcaption>Séjour montagne, été 2026</figcaption></figure>
+  </div>
+</section>
+
+<section class="une" id="une">
+  <div class="wrap grille">
+    <div class="principal reveal">
+      <div class="meta"><span class="tag"><i></i> À la une</span><time datetime="2026-09-25">Vendredi 25 septembre 2026</time></div>
+      <h2>Le programme des séjours adaptés de Noël 2026 est en ligne</h2>
+      <p class="chapo">Séjours du samedi 19 décembre 2026 au samedi 2 janvier 2027, sur différentes dates. À sélectionner selon le niveau d'autonomie, la tranche d'âge, la dynamique et la thématique du séjour. Accueils possibles, sans surcoût, à Perpignan, Narbonne, Béziers, Montpellier, Carcassonne, Castelnaudary ou Toulouse.</p>
+      <div class="docs">
+        <a class="doc" href="#"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg></span><span><b>Programme des séjours adaptés adultes, Noël 2026</b><small>PDF, mis à jour le 25/09/2026</small></span><span class="fleche">→</span></a>
+        <a class="doc" href="#"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg></span><span><b>Places disponibles, Noël 2026</b><small>PDF, actualisé chaque semaine</small></span><span class="fleche">→</span></a>
+      </div>
+    </div>
+    <aside class="bref reveal">
+      <h3>En bref</h3>
+      <article><time datetime="2026-09-25">25 septembre 2026</time><b>Nous recrutons des animateurs pour Noël 2026</b><p>Responsables de séjours et animateurs au départ de Perpignan, Montpellier ou Toulouse.</p></article>
+      <article><time datetime="2026-08-31">31 août 2026</time><b>Plus de 800 personnes parties en vacances cet été</b><p>Andalousie, Arcachon, Corse et Disneyland ont clôturé la saison. Merci aux vacanciers, équipes, hébergements, familles et établissements.</p></article>
+      <article><time datetime="2026-05-30">Mai 2026</time><b>La Villa ALTER ET GO ! ouvre à Rivesaltes</b><p>187 m², 15 personnes, rez-de-chaussée 100 % accessible, à 15 minutes des plages.</p></article>
+      <a class="tous" href="#" data-open-popup>Toutes les actualités →</a>
+    </aside>
+  </div>
+</section>
+
+<section class="rubriques" id="sejours">
+  <div class="wrap">
+    <article class="rubrique reveal">
+      <span class="num">01</span>
+      <div class="txt"><span class="kicker">Séjours adultes</span><h3>Partir en vacances, toute l'année</h3><p>ALTER ET GO ! organise des vacances pour jeunes adultes et personnes vieillissantes en situation de handicap mental du sud de la France : campagne, ville, mer, montagne, équitation, artistique, sport, et des séjours à l'étranger.</p><div class="liens"><a class="btn btn-turq" href="#">Découvrir les séjours</a><a class="btn" href="#">Dossier d'inscription</a></div></div>
+      <figure><img src="assets/img/slider-test1.jpg" alt="Vacanciers en kayak de mer, bras levés"><figcaption>Kayak de mer, séjour été</figcaption></figure>
+    </article>
+    <article class="rubrique reveal">
+      <span class="num">02</span>
+      <div class="txt"><span class="kicker">Animateurs</span><h3>Un job qui a du sens</h3><p>Vous souhaitez acquérir ou diversifier votre expérience auprès d'un public en situation de handicap mental en encadrant des petits groupes d'adultes ? Un week-end de préparation, une équipe de confiance, 2 ou 3 publics différents.</p><div class="liens"><a class="btn btn-corail" href="#recrute">Je postule !</a><a class="btn" href="#">Espace animateurs</a></div></div>
+      <figure><img src="assets/img/photo-anime-alter-min.jpg" alt="Équipe et vacanciers sur une passerelle en altitude"><figcaption>Équipe et vacanciers, passerelle au-dessus des nuages</figcaption></figure>
+    </article>
+    <article class="rubrique reveal">
+      <span class="num">03</span>
+      <div class="txt"><span class="kicker">Nos gîtes</span><h3>Des gîtes de groupe accessibles à tous</h3><p>Un village de gîtes à Marquixanes, face au Canigou, et la Villa ALTER ET GO ! à Rivesaltes, à 15 minutes des plages. Groupes, familles, séminaires, sportifs : tout le monde est le bienvenu.</p><div class="liens"><a class="btn btn-turq" href="#gites">Découvrir les gîtes</a></div></div>
+      <figure><img src="assets/img/villa-piscine-1.jpg" alt="Piscine de la Villa ALTER ET GO ! à Rivesaltes"><figcaption>La Villa ALTER ET GO !, Rivesaltes</figcaption></figure>
+    </article>
+  </div>
+</section>
+
+<section class="calendrier">
+  <div class="wrap">
+    <span class="kicker">Calendrier</span>
+    <h2>Les séjours adaptés, saison par saison</h2>
+    <p class="intro">Programmes et places disponibles publiés par l'équipe depuis l'administration du site. Chaque saison garde sa page et ses documents.</p>
+    <table>
+      <thead><tr><th scope="col">Saison</th><th scope="col">Dates</th><th scope="col">État</th><th scope="col">Documents</th></tr></thead>
+      <tbody>
+        <tr><td><span class="saison">Printemps 2026</span></td><td>Du 18 avril au 3 mai 2026</td><td><span class="etat">Terminé</span></td><td><ul><li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>Programme Printemps 2026</a></li></ul></td></tr>
+        <tr><td><span class="saison">Été 2026</span></td><td>Juillet et août 2026</td><td><span class="etat">Terminé</span></td><td><ul><li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>Catalogue Adulte Été 2026</a></li></ul></td></tr>
+        <tr class="ouvert"><td><span class="saison">Noël 2026</span></td><td>Du 19 décembre 2026 au 2 janvier 2027</td><td><span class="etat ouvert">Inscriptions ouvertes</span></td><td><ul><li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>Programme Noël 2026</a></li><li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg>Places disponibles</a></li><li><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Dossier d'inscription</a></li></ul></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="histoire">
+  <div class="wrap">
+    <blockquote class="reveal">« Favoriser l'intégration, la socialisation et l'autonomie, tout en offrant à l'entourage un temps de répit. »<footer>L'objectif d'ALTER ET GO ! depuis octobre 2008</footer></blockquote>
+    <div class="texte reveal">
+      <span class="kicker">ALTER ET GO ! en quelques mots</span>
+      <p>ALTER ET GO ! est née de la rencontre entre deux éducateurs en IME et la famille d'une adulte en situation de handicap mental. Journées et soirées festives dans les Pyrénées-Orientales, week-ends, séjours courts et longs dans tout le sud de la France.</p>
+      <ul class="faits">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Groupes restreints et homogènes</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Prise en charge près du domicile, à des heures décentes</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Équipes formées en amont de chaque séjour</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Contact direct avec l'équipe qui accompagne</li>
+      </ul>
+      <p>Des séjours de Tourisme Solidaire Adapté ont mené nos adhérents au Pérou, au Mexique, en Tanzanie, en Indonésie, au Sri Lanka, en Roumanie, en Grèce, au Québec ou à Cuba.</p>
+      <a class="btn" href="#">Lire notre histoire</a>
+    </div>
+  </div>
+</section>
+
+<section class="gites" id="gites">
+  <div class="wrap">
+    <span class="kicker">Nos gîtes de groupe adaptés</span>
+    <h2>Deux hébergements accessibles à tous</h2>
+    <p class="intro">Faire cohabiter sur un même lieu des groupes d'horizons divers : personnes en situation de handicap, familles, amis, séminaires, sportifs.</p>
+    <div class="deux">
+      <article class="gite reveal">
+        <img src="assets/img/vgites.jpg" alt="Le village de gîtes à Marquixanes avec vue sur le Canigou">
+        <div class="in"><span class="lieu">Marquixanes, massif du Canigó</span><h3>Le Village de Gîtes</h3><p>Trois éco-gîtes de plain-pied de 15 places, hébergements insolites, salles, restaurant et piscine balnéo avec vue panoramique.</p>
+          <dl><dt>Capacité</dt><dd>5 à 45 personnes, 55 avec les insolites</dd><dt>Insolite</dt><dd>Tente Safari et Dôme, jusqu'à 9 personnes</dd><dt>Services</dt><dd>Restaurant, salon de massage, espace bien-être</dd></dl>
+          <a class="btn btn-turq" href="https://www.gite-groupe-canigou.org">Découvrir le village</a></div>
+      </article>
+      <article class="gite reveal">
+        <img src="assets/img/villa-exterieur_jardin_vue_generale.jpg" alt="La Villa ALTER ET GO ! à Rivesaltes, terrasse et jardin">
+        <div class="in"><span class="lieu">Rivesaltes, à 15 min des plages <span class="nouveau">Nouveau 2026</span></span><h3>La Villa ALTER ET GO !</h3><p>Une grande villa climatisée de 187 m², 6 chambres et 3 salles de bain, jusqu'à 15 personnes.</p>
+          <dl><dt>Accessibilité</dt><dd>Rez-de-chaussée de 131 m² 100 % PMR</dd><dt>Extérieur</dt><dd>Mini piscine, transats, barbecue</dd><dt>Accès</dt><dd>Gare à 3 min, autoroute à 5 min, aéroport à 10 min</dd></dl>
+          <a class="btn btn-turq" href="#">Découvrir la villa</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="recrute" id="recrute">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Recrutement</span>
+      <h2>Nous recrutons des animateurs de séjours adaptés</h2>
+      <p>Au départ de Perpignan, Montpellier ou Toulouse. Responsables de séjours et animatrices / animateurs pour les vacances de Noël 2026, pour développer votre expérience auprès de 2 ou 3 publics différents.</p>
+      <ol>
+        <li>Un week-end de préparation avant chaque séjour</li>
+        <li>Une équipe d'encadrement de confiance, mixte dans la mesure du possible</li>
+        <li>Des groupes restreints et homogènes selon l'âge et l'autonomie</li>
+      </ol>
+    </div>
+    <div class="boite reveal"><span class="d">Noël 2026</span><p>Séjours du samedi 19 décembre 2026 au samedi 2 janvier 2027. Un pied à terre près de la ville de départ est indispensable.</p><a class="btn btn-corail" href="#" style="width:100%;justify-content:center">Formulaire de candidature</a></div>
+  </div>
+</section>
+
+<section class="confiance" id="confiance">
+  <div class="wrap">
+    <span class="kicker">Ils nous font confiance</span>
+    <h2>Établissements médico-sociaux, collectivités et partenaires</h2>
+    <p class="intro">Merci aux associations gestionnaires et à leurs établissements de nous soutenir, et aux collectivités, fondations et entreprises de nous accorder leur confiance.</p>
+    <div class="logos reveal">
+      <div><img src="assets/logos-partenaires/logo_cr_languedoc_roussillon.gif" alt="Région Languedoc-Roussillon"></div>
+      <div><img src="assets/logos-partenaires/cg.gif" alt="Conseil général des Pyrénées-Orientales"></div>
+      <div><img src="assets/logos-partenaires/logo_perpignan.jpg" alt="Ville de Perpignan"></div>
+      <div><img src="assets/logos-partenaires/caf.gif" alt="CAF"></div>
+      <div><img src="assets/logos-partenaires/logo_fundacio_port_aventura_petit.jpg" alt="Fundació PortAventura"></div>
+    </div>
+    <ul class="etabs reveal">
+      <li>Sésame Autisme Roussillon</li><li>Adapei 66</li><li>Association Joseph Sauvy</li><li>Sésame Autisme Languedoc</li><li>Val de Sournia</li><li>Afdaim Adapei 11</li><li>Apei du Grand Montpellier</li><li>Adages</li><li>ASEI</li><li>APSH 34</li><li>APAJH 11</li><li>Foyer Les Mouettes, Le Barcarès</li>
+    </ul>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="kicker">Contact</span>
+      <h2>Une question, une option à poser ?</h2>
+      <p style="color:var(--gris);margin-top:.6rem">Après avoir posé une option par mail ou par téléphone, vous recevez le devis et le dossier du vacancier. Aucun acompte n'est demandé pour valider l'inscription.</p>
+      <div class="coord">
+        <div><b>04 68 87 89 01</b><span>alteretgo.info@gmail.com</span></div>
+        <div><b>Siège, Toulouges</b><span>Naturopole Bâtiment A, 3 boulevard de Clairfont, 66350 Toulouges</span></div>
+        <div><b>Antenne de Montpellier</b><span>1572 rue de Saint-Priest, 34090 Montpellier, au siège de l'Apei du Grand Montpellier</span></div>
+      </div>
+    </div>
+    <form class="form reveal" onsubmit="return false">
+      <div class="deux"><label>Nom <input type="text" placeholder="Votre nom"></label><label>E-mail <input type="email" placeholder="vous@exemple.fr"></label></div>
+      <label>Vous êtes <select><option>Une famille ou un vacancier</option><option>Un établissement médico-social</option><option>Un candidat animateur</option><option>Un groupe pour les gîtes</option></select></label>
+      <label>Message <textarea rows="5" placeholder="Votre demande"></textarea></label>
+      <small>Protection anti-robots invisible, sans case à cocher.</small>
+      <button class="btn btn-encre" type="submit" style="justify-content:center">Envoyer</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div><span class="logo-f"><img src="assets/img/logo.png" alt="ALTER ET GO !"></span><p>Loisirs et vacances adaptés pour personnes en situation de handicap mental, et gîtes de groupe accessibles à tous.</p></div>
+      <div><h4>Séjours</h4><ul><li><a href="#">Printemps</a></li><li><a href="#">Été</a></li><li><a href="#">Noël</a></li><li><a href="#">Dossier d'inscription</a></li></ul></div>
+      <div><h4>Gîtes et équipe</h4><ul><li><a href="#">Village de Gîtes, Marquixanes</a></li><li><a href="#">Villa, Rivesaltes</a></li><li><a href="#">Devenir animateur</a></li><li><a href="#">Espace animateurs</a></li></ul></div>
+      <div><h4>Agréments</h4><p class="agre">Immatriculée au registre des opérateurs de voyages (Atout France). Agrément Vacances Adaptées Organisées valable jusqu'en 2028.</p></div>
+    </div>
+    <div class="bas"><span>© 2026 ALTER ET GO ! · <a href="#">Mentions légales</a> · <a href="#">Accessibilité</a></span><span>Maquette © Sylvain Caron 2026 · proposition non contractuelle</span></div>
+  </div>
+</footer>
+
+<div class="popup" id="popup-actu" role="dialog" aria-modal="true" aria-labelledby="popup-titre">
+  <div class="box">
+    <div class="head"><span class="k"><i></i> Actualité ALTER ET GO !</span><button class="popup-close" data-close>Fermer ✕</button></div>
+    <div class="corps">
+      <h3 id="popup-titre">Belle rentrée à tous, et rendez-vous à Noël !</h3>
+      <p>Ce lundi 31 août 2026 sont partis nos 4 derniers séjours de la saison estivale 2026 : Andalousie, Arcachon, Corse et Disneyland !</p>
+      <p>Nous souhaitons une belle rentrée à tous les acteurs qui nous ont permis de faire partir plus de 800 personnes en vacances cet été : vacanciers, équipes, hébergements, familles et établissements médico-sociaux.</p>
+      <p>Le programme des <strong>Séjours Adaptés pour Adultes des vacances de Noël 2026</strong> est en ligne. Les places disponibles sont mises à jour régulièrement.</p>
+    </div>
+    <div class="pied"><a class="btn btn-corail" href="#une" data-close>Voir le programme de Noël</a><label><input type="checkbox"> Ne plus afficher aujourd'hui</label></div>
+  </div>
+</div>
+
+<div class="maq">Maquette 3 / 3 · Carnet · © Sylvain Caron 2026</div>
+<script src="assets/commun.js"></script>
+<script>
+(function(){var g=document.getElementById('btn-grand'),c=document.getElementById('btn-contraste');
+g.addEventListener('click',function(){var on=document.body.classList.toggle('grand');g.setAttribute('aria-pressed',on)});
+c.addEventListener('click',function(){var on=document.body.classList.toggle('contraste');c.setAttribute('aria-pressed',on)});})();
+</script>
+</body>
+</html>
